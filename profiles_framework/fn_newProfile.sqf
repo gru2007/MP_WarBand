@@ -30,7 +30,7 @@
     }
   };
   if _corrupt then {
-    hint parseText "<t color='#ff1010'>ОШИБКА В СОХРАНЕНИИ ПРОФИЛЯ</t><br/>Пожалуйста, скинь из %localappdata%\Arma 3 последний .rpt файл ZONT_#9164 в дискорде";
+    hint parseText "<t color='#ff1010'>ОШИБКА В СОХРАНЕНИИ ПРОФИЛЯ</t><br/>Пожалуйста, скинь из %localappdata%\Arma 3 последний .rpt файл gru2007#1091 в дискорде";
   };
 
   ZPR_ID = _id;

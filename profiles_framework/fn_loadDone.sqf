@@ -6,7 +6,7 @@ if (not isNil "_equip") then {
 
 if (not isNil "_pos") then {
   if (typeName [] == typeName _pos and {count _pos == 3}) then {
-    private _tp = ["Телепортироваться на последнее сохранённое место? Нужно, если у вас вылетела игра или т.п.", "Revenge of the Republic RP", "Да", "Нет"]
+    private _tp = ["Телепортироваться на последнее сохранённое место? / Teleport to last saved place?", "Warband Milsim", "Yes", "No"]
         call BIS_fnc_guiMessage;
     if (_tp) then { player setPosATL _pos };
   };

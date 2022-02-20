@@ -1,6 +1,10 @@
 if (!hasInterface) exitWith { };
 removeAllActions player;
 
+//Перевести это красиво не выйдет...
+//Похоже придёться сделать в БД строку язык пользователя
+//Но это уже когда сервер будет
+/*
 private _text = "";
 switch (playerSide) do {
     case west: {_text = "<t color='#d40000' size='3'>Вы очнулись в медицинском блоке!</t><br/><t color='#ffffff' size='1'>Вы не помните, что с Вами случилось!</t>"};
@@ -9,7 +13,7 @@ switch (playerSide) do {
 		case east: {_text = "<t color='#d40000' size='3'>Вас пересобрали на базе!</t><br/><t color='#ffffff' size='1'>Вы не помните, что с Вами случилось!</t>"};
 };
 titleText [_text, "PLAIN", 0.2, true, true];
-
+*/
 [] spawn {
 	"dynamicBlur" ppEffectEnable true;
 	"dynamicBlur" ppEffectAdjust [15];

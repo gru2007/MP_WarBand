@@ -1,5 +1,5 @@
 MPF_AS_launchTimer = {[] spawn { sleep 15; MPC_AUTOSAVE_PREV = false }};
-MPF_AS_notice = { [findDisplay _this, "Позиция и лут сохранены", 3] call ZONT_fnc_showTextLC };
+MPF_AS_notice = { [findDisplay _this, "Position and loot saved", 3] call ZONT_fnc_showTextLC };
 MPC_AUTOSAVE_PREV = false;
 MPC_AUTOSAVE_TIMER = scriptNull;
 MPC_ausvHandler_esc = [{

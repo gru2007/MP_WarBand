@@ -48,7 +48,7 @@ private _fn_getRange = {
     params ["_target", "_caller", "_inpt", "_args", "_res"];
     systemChat format ["** %1 %2 | %3 **", name _caller, _inpt, _res];
   },
-  { selectRandom ["Успешно", "Неудачно"] }]
+  { selectRandom ["Успешно (Successfully)", "Неудачно (Unsuccessful)"] }]
 ] call ZONT_fnc_addChatCommand;
 
 [ "roll",
@@ -78,7 +78,7 @@ private _fn_getRange = {
 
     systemChat _input;
     private _ia = _input splitString " .,";
-    if (count _ia == 0) exitWith { systemChat "Доступные варианты: #role add, #role rm" };
+    if (count _ia == 0) exitWith { systemChat "Possible: #role add, #role rm" };
 
     if not (assert !isNil "ZPR_roles") then {
       systemChat "Похоже, что у вас сломались скрипты. Есле перезаход не поможет, обратитесь к техадмину";
@@ -95,12 +95,12 @@ private _fn_getRange = {
             ZPR_roles pushBack _pid;
             ZPR_roles = ZPR_roles arrayIntersect ZPR_roles;
             if (player call ZONT_fnc_saveProfile) then {
-              hint "Сохранено!";
+              hint "Saved!";
             } else {
-              hint parseText "<t color='#ff3030'>Не удалось сохранить!</t>";
+              hint parseText "<t color='#ff3030'>Can't save!</t>";
             };
-          },{},["Выбери роль, которую добавить",0.17,0.25],
-          "Роль [ %1 ]",
+          },{},["Выбери роль, которую добавить / Choose role to add",0.17,0.25],
+          "Role [ %1 ]",
           call ZONT_fnc_getRoles
         ] spawn ZONT_fnc_profilesGUI;
       };
@@ -119,12 +119,12 @@ private _fn_getRange = {
 
             ZPR_roles deleteAt (ZPR_roles find _pid);
             if (player call ZONT_fnc_saveProfile) then {
-              hint "Сохранено!";
+              hint "Saved!";
             } else {
-              hint parseText "<t color='#ff3030'>Не удалось сохранить!</t>";
+              hint parseText "<t color='#ff3030'>Can't save!</t>";
             };
-          },{},["Выбери роль, которую удалить",0.17,0.25],
-          "Удалить роль [ %1 ]",
+          },{},["Выбери роль, которую удалить / Choose a role to delete",0.17,0.25],
+          "Delete role [ %1 ]",
           _roles
         ] spawn ZONT_fnc_profilesGUI;
       };

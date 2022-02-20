@@ -12,21 +12,7 @@ waitUntil {vehicle player == player};
 
 /******                            Inf Ammo                             ******/
 MagazineWhiteList = [
-  "JLTS_DC15A_mag", //DC-15A
-  "JLTS_DC15S_mag", //DC-15S
-  "JLTS_DC15X_mag", //DC-15X
-  "JLTS_Z6_mag", //Z-6
-  "3AS_60Rnd_EC50_Mag", //Westar M5
-  "212th_15rnd_Energy_dc15XM_mag", //DC-15XM
-  "212th_3rnd_Plasma_dc15XM_mag", //DC-15XM
-  "JLTS_DC17SA_mag", //DC-17SA
-  "3AS_15Rnd_EC30_mag", //DC-15SA Razor
-  "3AS_Chaingun_Drum_Mag", //Chaingun
-  "3AS_100Rnd_EC40_mag", //DC-17M
-  "3AS_5Rnd_EC80_mag", //DC-17M
-  "3AS_AntiArmour_mag", //DC-17M
-  "212th_35Rnd_DC15A_mag", //DC-15A (Mk. 6) 212
-  "212th_35Rnd_DC17_mag" //От 212 мода тож
+
 ];
 player addEventHandler ["Reloaded", { 
   if (((_this select 3) select 0) in MagazineWhiteList) then { 
@@ -91,7 +77,7 @@ MCH_ZEUS_LIST = [{
           hintSilent "";
       }];
   };
-  private _str = "<t color='#00FF00'>Активные зевсы:</t>";
+  private _str = "<t color='#00FF00'>Active zeuses:</t>";
   { _str = format ["%1<br/>%2", _str, _x]; } forEach mpv_current_curators;
   hintSilent parseText _str;
 }, 1] call CBA_fnc_addPerFrameHandler;

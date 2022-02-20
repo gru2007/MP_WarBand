@@ -253,11 +253,11 @@ class CfgWLFactionAssets
 
 //Discord info
 class CfgDiscordRichPresence {
-    applicationID="797527397447761940";				            // Provided by discord
-    defaultDetails="May the Force be with You!";	        // Upper text
+    applicationID="925714148791287818";				            // Provided by discord
+    defaultDetails="The best milsim in Arma3 ever";	        // Upper text
     defaultState="";			                                // Lower text
-    defaultLargeImageKey="pic";					                	// Large image
-    defaultLargeImageText="Revenge of the Republic RP";   // Large image hover text
+    defaultLargeImageKey="warband";					                	// Large image
+    defaultLargeImageText="WarBand Milsim";   // Large image hover text
     defaultSmallImageKey="arma3";					              	// Small image
     defaultSmallImageText="Arma 3";				            		// Small image hover text
     useTimeElapsed=1;								                    	// Show time elapsed since the player connected (1 - true, 0 - false)
