@@ -27,7 +27,7 @@ if (!isNil "_curator" && !isNull _curator) then {
     sleep 0.4;
     _player assignCurator _curator;
     missionNamespace setVariable _setvar;
-    ["Вы назначены на роль куратора игры"] remoteExec ["systemChat", _player];
+    ["Вы получили Зевс | You got Zeus"] remoteExec ["systemChat", _player];
   }
 } else {
   diag_log format ["ZONT_fnc_giveZeus ERROR: _curator is null or nil for %1", _player];

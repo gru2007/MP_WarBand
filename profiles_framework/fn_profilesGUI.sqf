@@ -12,12 +12,11 @@ private _newUser = count _profiles == 0;
 if (isNil "_headerOverride") then {
   if (_newUser) then {
     [
-    "<t size='1' color='#09F009'>Welcome, soldier!</t><br/>" +
     "<t size='1.2'>Поскольку ты в первый раз зашел на наш сервер, " +
     "убедись, что ты ознакомился с правилами! <t size='0.8'>[ ссылки кликабельны ]</t><br/>" +
     "<t size='1.2'>Since this is the first time you have logged into our server, " +
     "make sure, that you are familiar with the rules! <t size='0.8'>[ links are clickable ]</t><br/>" +
-    "<a size='2.9' href='https://discord.gg/wHzuKUT5UG'><img image='pic\dis.paa'/></a><br/>" +
+    "<a size='2.9' href='https://discord.gg/wHzuKUT5UG'><img image='pic\dis.paa'/></a>" +
     "<a size='1.8' href='https://docs.google.com/document/d/16r7T-iu-q0XcEom3wJscB209_QQhxK3hwyK5Tzgbero/edit'>" +
     "<img image='pic\doc.paa'/><t colorLink='#0788ff' color='#0788ff'> Rules</t></a><br/>" +
     "После этого выбери роль из списка ниже.<br/>" + 

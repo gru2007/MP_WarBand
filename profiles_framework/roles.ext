@@ -2,6 +2,5 @@
 
 class CfgRoles {
   class Zeus  { id=ROLE_ZUUS; hide=true; };
-  class NATO    { id=ROLE_NATO; name="NATO Soldier"; };
-  class ODKB   { id=ROLE_ODKB; name="Солдат ОДКБ"; };
+  class Solid   { id=ROLE_SOLID; name="Солдат (Soldier)"; };
 };
