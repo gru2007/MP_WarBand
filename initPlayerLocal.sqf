@@ -10,6 +10,9 @@ waitUntil {vehicle player == player};
 [] execVM "chatCommands.sqf";
 [] execVM "legacy\intro\introtext.sqf";
 
+/******                            Language                             ******/
+GameLanguage = "English";
+
 /******                            Inf Ammo                             ******/
 MagazineWhiteList = [
 

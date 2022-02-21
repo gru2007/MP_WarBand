@@ -41,8 +41,11 @@ VVS_Car_Mercenary = [
 VVS_Air_Mercenary = [
 
 	];
-VVS_CIS = [
+VVS_RF = [
 	"C_Offroad_01_F"
+	];
+VVS_RF_Air = [
+	"B_Heli_Light_01_armed_F"
 	];
 VVS_Ship = [];
 VVS_Armored = [];

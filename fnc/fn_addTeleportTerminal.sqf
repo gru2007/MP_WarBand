@@ -17,6 +17,6 @@
 params [["_thisTerm", objNull], ["_tooltip", ""], ["_posATL", []], ["_color", "#ffffff"], ["_cond", "true"], ["_priority", 6]];
 
 if (isNil '_thisTerm') exitWith { };
-if (count _posATL == 0) then { _posATL = ASLToATL (_thisTerm modelToWorldWorld [2,0,0]) };
+if (count _posATL == 0) then { _posATL = ASLToATL (_thisTerm modelToWorldWorld [0,-2,0]) };
 
 _thisTerm setVariable ["ZTT_params", [_tooltip, _color, _posATL, _cond, _priority]];

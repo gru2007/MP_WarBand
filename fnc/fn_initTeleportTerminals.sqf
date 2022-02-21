@@ -23,12 +23,14 @@ private _teleportTerms = [];
         params ["_target", "_caller", "_actionId", "_arguments"];
         _arguments spawn {
           params ["_pos", "_term"];
-          titleText ["Перемещение...","BLACK OUT",0.5];
+          if(GameLanguage=="Russian") then {titleText ["Перемещение...","BLACK OUT",0.5];}
+          else{titleText ["Teleporting...","BLACK OUT",0.5];};
           sleep 1;
           player setPosATL _pos;
           player setDir ((getDir player) + (player getRelDir _term));
           sleep 1;
-          titleText ["Перемещение...","BLACK IN",3];
+          if(GameLanguage=="Russian") then {titleText ["Перемещение...","BLACK IN",0.5];}
+          else{titleText ["Teleporting...","BLACK IN",0.5];};
         }
       },
       [_posATL, _thisTerm], _priority + 100, true,true,"",_cond,3];

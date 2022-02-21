@@ -143,7 +143,7 @@ class CfgDebriefing {
 };
 
 class CfgConsts {
-  ztt_terminals[] = {"Land_OPTRE_vidphone_terminal"};
+  ztt_terminals[] = {"Land_PhoneBooth_01_F"};
   ghr_rand_radius = 5;
   ghr_rand_period = 2;
   ghr_entry = "%1: <t color='%3'>%2</t>"; // %1 - unit, %2 - heartrate, %3 - color (#abc123)
