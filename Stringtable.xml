@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="WarBand">
+    <Key ID="STR_WB_Spawn">
+        <English>Spawn</English>
+        <Russian>Спавн</Russian>
+    </Key>
+</Project>

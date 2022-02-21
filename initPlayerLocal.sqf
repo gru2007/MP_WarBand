@@ -11,7 +11,7 @@ waitUntil {vehicle player == player};
 [] execVM "legacy\intro\introtext.sqf";
 
 /******                            Language                             ******/
-GameLanguage = "English";
+GameLanguage = language;
 
 /******                            Inf Ammo                             ******/
 MagazineWhiteList = [

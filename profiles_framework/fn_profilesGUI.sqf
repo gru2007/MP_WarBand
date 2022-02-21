@@ -3,9 +3,16 @@ params [
   ["_handlerSelect", nil],
   ["_handlerEscape", nil],
   ["_headerOverride", nil],
-  ["_str_role", "НОВЫЙ ПРОФИЛЬ [ %1 ]", [""]],
+  ["_str_role", "%1", [""]],
   ["_roles", (call ZONT_fnc_getRoles), [[]]]
 ];
+
+if(GameLanguage=="Russian") then {
+_str_role = format ["НОВЫЙ ПРОФИЛЬ [ %1 ]", _str_role]; 
+}
+else {
+  _str_role = format ["NEW PROFILE [ %1 ]", _str_role]; 
+};
 
 private _newUser = count _profiles == 0;
 

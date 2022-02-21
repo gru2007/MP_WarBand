@@ -8,6 +8,7 @@ private _fn_getRange = {
   _arr
 };
 
+//Когда-то я все команды переведу...
 [ "me",
 [[ ], // args
   {   // condition

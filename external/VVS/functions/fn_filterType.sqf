@@ -26,6 +26,8 @@ _vehicleList = switch(_filter) do
 	case "БПА": {VVS_pre_Autonomous};
 	case "РФ": {VVS_RF};
 	case "РФ_Воздух": {VVS_RF_Air};
+	case "НАТО": {VVS_NATO};
+	case "НАТО_Воздух": {VVS_NATO_Air};
 
 	default {[]};
 };

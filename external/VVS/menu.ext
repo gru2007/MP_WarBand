@@ -117,7 +117,7 @@ class VVS_Menu
 		class ButtonSettings : VVS_RscButtonMenu
 		{
 			idc = -1;
-			text = "Спавн";
+			text = "$STR_WB_Spawn";
 			onButtonClick = "[] spawn VVS_fnc_spawnVehicle";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);

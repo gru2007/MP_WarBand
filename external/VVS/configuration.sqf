@@ -41,12 +41,61 @@ VVS_Car_Mercenary = [
 VVS_Air_Mercenary = [
 
 	];
+
+
+
 VVS_RF = [
-	"C_Offroad_01_F"
+	"rhsgref_BRDM2_ATGM_msv",
+	"rhs_t90a_tv",
+	"rhs_gaz66_zu23_msv",
+	"rhs_kamaz5350_msv",
+	"rhs_kamaz5350_flatbed_cover_msv",
+	"RHS_Ural_Fuel_MSV_01",
+	"RHS_Ural_Ammo_MSV_01",
+	"RHS_Ural_Repair_MSV_01",
+	"rhs_tigr_m_msv",
+	"rhs_tigr_sts_msv",
+	"rhs_btr80_msv",
+	"rhs_btr80a_msv",
+	"rhs_bmp2_msv",
+	"rhsgref_BRDM2_HQ_msv",
+	"rhsgref_BRDM2_msv",
+	"rhs_gaz66_ammo_msv",
+	"RHS_UAZ_MSV_01"
 	];
 VVS_RF_Air = [
-	"B_Heli_Light_01_armed_F"
+	"B_Heli_Light_01_armed_F",
+	"RHS_Mi8mt_Cargo_vvs"
 	];
+	
+VVS_NATO = [
+	"rhsusf_m113_usarmy_medical",
+	"rhsusf_M977A4_REPAIR_usarmy_wd",
+	"rhsusf_M978A4_usarmy_wd",
+	"rhsusf_mrzr4_d",
+	"rhsusf_stryker_m1132_m2_wd",
+	"RHS_M2A3_wd",
+	"RHS_M6_wd",
+	"rhsusf_m1a1fep_wd",
+	"rhsusf_m1025_w_mk19",
+	"rhsusf_m966_w",
+	"rhsusf_m1025_w_m2",
+	"rhsusf_m1151_m2_v2_usarmy_wd",
+	"rhsusf_m1025_w",
+	"rhsusf_m1240a1_m2_usarmy_wd",
+	"rhsusf_m1240a1_mk19_uik_usarmy_wd",
+	"rhsusf_M1083A1P2_B_M2_WD_fmtv_usarmy",
+	"rhsusf_M1083A1P2_B_WD_fmtv_usarmy",
+	"LOP_CHR_Civ_Landrover",
+	"rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy"
+	];
+VVS_NATO_Air = [
+	"B_Heli_Light_01_armed_F",
+	"RHS_UH60M2"
+	];
+
+
+
 VVS_Ship = [];
 VVS_Armored = [];
 VVS_Autonomous = [];
