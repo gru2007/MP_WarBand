@@ -9,7 +9,7 @@ MPS_spawn_BDINIT = [] spawn {
 
 MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHandler;
 
-/******                               ???                                ******/
+/******                         Building system                           ******/
 private _fortif_list = [
     ["Land_BagFence_Corner_F",3],
     ["Land_BagFence_Round_F",3],

@@ -4,4 +4,36 @@
         <English>Spawn</English>
         <Russian>Спавн</Russian>
     </Key>
+    <Key ID="STR_WB_showpass">
+        <English>Show ID card</English>
+        <Russian>Показать паспорт</Russian>
+    </Key>
+    <Key ID="STR_WB_extpass">
+        <English>Take back your passport</English>
+        <Russian>Убрать паспорт</Russian>
+    </Key>
+    <Key ID="STR_WB_surname">
+        <English>Nick</English>
+        <Russian>Ник</Russian>
+    </Key>
+    <Key ID="STR_WB_name">
+        <English>Division/Rank</English>
+        <Russian>Подразделение/Звание</Russian>
+    </Key>
+    <Key ID="STR_WB_date">
+        <English>Date of birth</English>
+        <Russian>Дата Рождения</Russian>
+    </Key>
+    <Key ID="STR_WB_bplace">
+        <English>Place of birth</English>
+        <Russian>Место рождения</Russian>
+    </Key>
+    <Key ID="STR_WB_expire">
+        <English>Expiry date</English>
+        <Russian>Дата окончания</Russian>
+    </Key>
+    <Key ID="STR_WB_gdazd">
+        <English>Citizenship</English>
+        <Russian>Гражданство</Russian>
+    </Key>
 </Project>

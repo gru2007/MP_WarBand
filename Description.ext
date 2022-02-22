@@ -2,8 +2,9 @@
 #include "infiSTAR_AdminMenu.ext"
 #include "skills_framework\skills.ext"
 #include "profiles_framework\roles.ext"
-/**********                       RSC includes                       **********/
+/**********                       External includes                       **********/
 #include "external\VVS\menu.ext"
+#include "external\grad-passport\grad_passport.hpp"
 
 /**********                        Properties                        **********/
 respawnOnStart = -1;
@@ -87,6 +88,7 @@ class CfgFunctions {
   #include "external\VVS\Functions.ext"
   #include "external\tts_beam\cfgFunctions.ext"
   #include "external\vcom\cfgFunctions.hpp"
+  #include "external\grad-passport\cfgFunctions.hpp"
 };
 
 /**********                        VCOM AI                        **********/
