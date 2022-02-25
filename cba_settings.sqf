@@ -526,7 +526,7 @@ acex_viewrestriction_preserveView = false;
 
 // ACE Ограничитель дальности видимости
 force ace_viewdistance_enabled = true;
-force ace_viewdistance_limitViewDistance = 10000;
+force ace_viewdistance_limitViewDistance = 2000;
 ace_viewdistance_objectViewDistanceCoeff = 0;
 ace_viewdistance_viewDistanceAirVehicle = 0;
 ace_viewdistance_viewDistanceLandVehicle = 0;
