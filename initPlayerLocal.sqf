@@ -80,7 +80,7 @@ MCH_ZEUS_LIST = [{
           hintSilent "";
       }];
   };
-  private _str = "<t color='#00FF00'>Active zeuses:</t>";
+  private _str = "<t color='#00FF00'>Active GMs:</t>";
   { _str = format ["%1<br/>%2", _str, _x]; } forEach mpv_current_curators;
   hintSilent parseText _str;
 }, 1] call CBA_fnc_addPerFrameHandler;
