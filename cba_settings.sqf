@@ -45,7 +45,7 @@ force ace_explosives_requireSpecialist = false;
 
 // ACE Возгорание
 force ace_cookoff_ammoCookoffDuration = 1.1;
-force ace_cookoff_enable = 0;
+force ace_cookoff_enable = 1;
 force ace_cookoff_enableAmmobox = true;
 force ace_cookoff_enableAmmoCookoff = true;
 ace_cookoff_enableFire = true;
