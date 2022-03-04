@@ -23,6 +23,11 @@ player addEventHandler ["Reloaded", {
   }; 
 }];
 
+/******                            Vehile Lists                             ******/
+Hveh = [ //1000$
+	"rhs_tigr_m_msv",
+	"rhs_tigr_sts_msv"
+];
 /******                            Ranks                             ******/
 _nameplayer = name player;
 if ((_nameplayer find "PFC" !=-1) || (_nameplayer find "CS" !=-1) || (_nameplayer find "CPL" !=-1)) then 

@@ -37,6 +37,18 @@ private _fn_getRange = {
   }]
 ] call ZONT_fnc_addChatCommand;
 
+[ "money",
+[[ ], // args
+  {   // condition
+    params ["_target", "_caller", "_inpt", "_args", "_res"];
+    _target == _caller;
+  },
+  {  // code
+    params ["_target", "_caller", "_inpt", "_args", "_res"];
+    call ZONT_fnc_getSideMoney;
+  }]
+] call ZONT_fnc_addChatCommand;
+
 [ "try",
 [ [], // args
   {   // condition

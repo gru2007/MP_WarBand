@@ -1,7 +1,7 @@
 //	edited by [TF]def 2015 09 20 (0.4.1)
 /**/
 //Only display vehicles for that players side, if true Opfor can only spawn Opfor vehicles and so on.
-VVS_SideOnly = false;
+VVS_SideOnly = true;
 
 //Only set to true if you are making pre-made vehicle lists with VVS_x (i.e VVS_Car)
 VVS_Premade_List = false;

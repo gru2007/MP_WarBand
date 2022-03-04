@@ -53,7 +53,13 @@ if(_mode == "Все") then
 		_cfgInfo = [_x] call VVS_fnc_cfgInfo;
 		if(count _cfgInfo > 0) then
 		{
-			_sideName = switch ((_cfgInfo select 5)) do {case 0: {"         EAST"}; case 1: {"         WEST"}; case 2: {"         GUER"}; case 3: {"         CIV"}; default {"         UNKNOWN"}};
+			if (_x in Hveh) then {
+				price = 1000;
+			} else {
+				price = 300;
+			};
+			
+			_sideName = format ["%1$", price];
 			_control lnbAddRow["",_cfgInfo select 3,_sideName,_cfgInfo select 4];
 			_control lnbSetPicture[[_row,0],_cfgInfo select 2];
 			_control lnbSetData[[_row,0],_x]; //Set the classname to index/column 0

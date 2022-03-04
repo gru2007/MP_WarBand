@@ -33,13 +33,13 @@ class CfgFunctions {
       class removeAllVars { };
       class getConst { };
       class forceExit { };
+      class getSideMoney { };
     };
     class Database {
       file = "database_framework";
       class bd_initBasic { };
       class bd_initCustom { };
       class bd_customRequest { };
-
       class commitInfo { };
       class retrieveCurators { };
     };
@@ -51,7 +51,6 @@ class CfgFunctions {
       class newProfile { };
       class checkRole { };
       class updProfile { };
-
       class saveProfile { };
       class loadProfile { };
       class autoSaveInit { };

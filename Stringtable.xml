@@ -36,4 +36,8 @@
         <English>Citizenship</English>
         <Russian>Гражданство</Russian>
     </Key>
+    <Key ID="STR_WB_nomoney">
+        <English>Your side doesn't have enough money</English>
+        <Russian>Ваша сторона не имеет достаточно денег</Russian>
+    </Key>
 </Project>
