@@ -30,6 +30,6 @@ private _fortif_list = [
     ["Land_Cargo_Tower_V1_F",50],
     ["Land_BarGate_F",15]
 ];
-[west,       50, _fortif_list] call acex_fortify_fnc_registerObjects;
-[east,       50, _fortif_list] call acex_fortify_fnc_registerObjects;
-[resistance, 50, _fortif_list] call acex_fortify_fnc_registerObjects;
+[west,       500, _fortif_list] call acex_fortify_fnc_registerObjects;
+[east,       500, _fortif_list] call acex_fortify_fnc_registerObjects;
+[resistance, 500, _fortif_list] call acex_fortify_fnc_registerObjects;
