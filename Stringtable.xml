@@ -40,4 +40,8 @@
         <English>Your side doesn't have enough money</English>
         <Russian>Ваша сторона не имеет достаточно денег</Russian>
     </Key>
+    <Key ID="STR_WB_wip">
+        <English>This function is in development</English>
+        <Russian>Функция ещё в разработке</Russian>
+    </Key>
 </Project>
