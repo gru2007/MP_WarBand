@@ -46,7 +46,11 @@ if(price > money) exitWith{
 //Take money
 if(playerSide==east) then {
 	ODKB_Money = ODKB_Money - price;
-	publicVariable "ODKB_Money";
+	publicVariable "ODKB_Money"; 
+	[[ODKB_Money], {
+	params ["_mmmoney"];
+	[MPS_BDL_pres, "updMoneyODKB", [_mmmoney]] call ZONT_fnc_bd_customRequest;
+	}] remoteExec ["bis_fnc_call", 2];
 } else {
 	NATO_Money = NATO_Money - price;
 	publicVariable "NATO_Money";
