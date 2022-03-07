@@ -7,8 +7,14 @@ CHVD_maxObj = 2600; // Set maximimum object view distance (default: 12000)
 
 //Init of money system
 if (isNil "ODKB_Money") then	// has the variable already been set and broadcast?
-{
-	ODKB_Money = 500;	// if not, set it on the local machine
+{	
+[{
+  private _mmoney = [MPS_BDL_pres, "getMoney", ["sv_money_east"]] call ZONT_fnc_bd_customRequest;
+  [_mmoney]
+},{
+  params ["_mmoney"];
+  ODKB_Money = _mmoney;
+}, []] call ZONT_fnc_remoteExecCallback; // if not, set it on the local machine
 };
 if (isNil "NATO_Money") then
 {
