@@ -22,7 +22,7 @@ if (isNil "ODKB_Money") then	// has the variable already been set and broadcast?
   [_mmoney]
 },{
   params ["_mmoney"];
-  ODKB_Money = _mmoney select 0;
+  ODKB_Money = (_mmoney select 0) select 0;
 }, []] call ZONT_fnc_remoteExecCallback; // if not, set it on the local machine
 };
 if (isNil "NATO_Money") then

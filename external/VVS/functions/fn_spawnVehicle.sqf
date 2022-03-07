@@ -23,12 +23,6 @@ _cfgInfo = [_className] call VVS_fnc_cfgInfo;
 _positionSpawn = [_pos select 0, _pos select 1, (_pos select 2) + 10000];
 _position = [_pos select 0, _pos select 1, (_pos select 2) + 0.5];
 
-//WIP
-if(true) exitWith{
-	hint localize "STR_WB_wip";
-	closeDialog 0;
-};
-
 //Get price
 if (_className in Hveh) then {
 	price = 1000;
