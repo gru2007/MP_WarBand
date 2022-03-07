@@ -27,7 +27,13 @@ if (isNil "ODKB_Money") then	// has the variable already been set and broadcast?
 };
 if (isNil "NATO_Money") then
 {
-	NATO_Money = 500;
+[{
+  private _mmoney = [MPS_BDL_pres, "getMoneyNATO", []] call ZONT_fnc_bd_customRequest;
+  [_mmoney]
+},{
+  params ["_mmoney"];
+  NATO_Money = (_mmoney select 0) select 0;
+}, []] call ZONT_fnc_remoteExecCallback; 
 };
 
 /******                            Vehile Lists                             ******/
@@ -93,7 +99,7 @@ MCH_ZEUS_LIST = [{
           hintSilent "";
       }];
   };
-  private _str = localize "STR_WB_GMs";
+  private _str = "<t color='#00FF00'>Active GMs:</t>";
   { _str = format ["%1<br/>%2", _str, _x]; } forEach mpv_current_curators;
   hintSilent parseText _str;
 }, 1] call CBA_fnc_addPerFrameHandler;

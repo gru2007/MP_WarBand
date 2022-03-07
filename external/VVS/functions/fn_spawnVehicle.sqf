@@ -54,6 +54,10 @@ if(playerSide==east) then {
 } else {
 	NATO_Money = NATO_Money - price;
 	publicVariable "NATO_Money";
+	[[NATO_Money], {
+	params ["_mmmoney"];
+	[MPS_BDL_pres, "updMoneyNATO", [_mmmoney]] call ZONT_fnc_bd_customRequest;
+	}] remoteExec ["bis_fnc_call", 2];
 };
 
 //Check to make sure the spawn point doesn't have a vehicle on it, if it does then delete it.
@@ -83,7 +87,8 @@ if(VVS_Checkbox) then
 };
 
 //hint format["Вы заспавнили %1",_displayName];
-[format["Кто-то купил %1 за %2$",_displayName,price]] remoteExec ["hint"];
+if(GameLanguage=="Russian") then {[format["%1 купил %2 за %3$",name player,_displayName,price]] remoteExec ["hint"];} 
+else {[format["%1 bought %2 for %3$",name player,_displayName,price]] remoteExec ["hint"];};
 sleep 3;
 _vehicle allowDamage true;
 closeDialog 0;

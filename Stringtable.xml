@@ -44,8 +44,24 @@
         <English>This function is in development</English>
         <Russian>Функция ещё в разработке</Russian>
     </Key>
-    <Key ID="STR_WB_GMs">
-        <English><t color='#00FF00'>Active GMs:</t></English>
-        <Russian><t color='#00FF00'>Активные ГМы:</t></Russian>
+    <Key ID="STR_WB_Close">
+        <English>Close</English>
+        <Russian>Закрыть</Russian>
+    </Key>
+    <Key ID="STR_WB_VVS">
+        <English>Virtual vehicles spawner</English>
+        <Russian>Виртуальный спавн техники</Russian>
+    </Key>
+    <Key ID="STR_WB_No">
+        <English>No</English>
+        <Russian>Нет</Russian>
+    </Key>
+    <Key ID="STR_WB_Yes">
+        <English>Yes</English>
+        <Russian>Да</Russian>
+    </Key>
+    <Key ID="STR_WB_Equip">
+        <English>Equipment:</English>
+        <Russian>Cнаряжение:</Russian>
     </Key>
 </Project>
