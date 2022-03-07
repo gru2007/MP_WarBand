@@ -13,6 +13,23 @@ waitUntil {vehicle player == player};
 /******                            Language                             ******/
 GameLanguage = language;
 
+
+/******                            Money                                ******/
+if (isNil "ODKB_Money") then	// has the variable already been set and broadcast?
+{	
+[{
+  private _mmoney = [MPS_BDL_pres, "getMoneyODKB", []] call ZONT_fnc_bd_customRequest;
+  [_mmoney]
+},{
+  params ["_mmoney"];
+  ODKB_Money = _mmoney;
+}, []] call ZONT_fnc_remoteExecCallback; // if not, set it on the local machine
+};
+if (isNil "NATO_Money") then
+{
+	NATO_Money = 500;
+};
+
 /******                            Inf Ammo                             ******/
 MagazineWhiteList = [
 
