@@ -10,7 +10,7 @@ if (isNil "ODKB_Money") then	// has the variable already been set and broadcast?
 {	
 [{
   _sv_money_east = "sv_money_east";
-  private _mmoney = [MPS_BDL_pres, "getMoney", []] call ZONT_fnc_bd_customRequest;
+  private _mmoney = [MPS_BDL_pres, "getMoney", [_sv_money_east]] call ZONT_fnc_bd_customRequest;
   [_mmoney]
 },{
   params ["_mmoney"];
