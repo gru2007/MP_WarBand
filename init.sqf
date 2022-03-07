@@ -9,7 +9,8 @@ CHVD_maxObj = 2600; // Set maximimum object view distance (default: 12000)
 if (isNil "ODKB_Money") then	// has the variable already been set and broadcast?
 {	
 [{
-  private _mmoney = [MPS_BDL_pres, "getMoney", ["sv_money_east"]] call ZONT_fnc_bd_customRequest;
+  _sv_money_east = "sv_money_east";
+  private _mmoney = [MPS_BDL_pres, "getMoney", []] call ZONT_fnc_bd_customRequest;
   [_mmoney]
 },{
   params ["_mmoney"];
