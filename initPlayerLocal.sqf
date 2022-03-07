@@ -13,21 +13,35 @@ waitUntil {vehicle player == player};
 /******                            Language                             ******/
 GameLanguage = language;
 
-/******                            Inf Ammo                             ******/
-MagazineWhiteList = [
 
-];
-player addEventHandler ["Reloaded", { 
-  if (((_this select 3) select 0) in MagazineWhiteList) then { 
-    (_this select 0) addMagazine ((_this select 3) select 0); 
-  }; 
-}];
+/******                            Money                                ******/
+if (isNil "ODKB_Money") then	// has the variable already been set and broadcast?
+{	
+[{
+  private _mmoney = [MPS_BDL_pres, "getMoneyODKB", []] call ZONT_fnc_bd_customRequest;
+  [_mmoney]
+},{
+  params ["_mmoney"];
+  ODKB_Money = (_mmoney select 0) select 0;
+}, []] call ZONT_fnc_remoteExecCallback; // if not, set it on the local machine
+};
+if (isNil "NATO_Money") then
+{
+[{
+  private _mmoney = [MPS_BDL_pres, "getMoneyNATO", []] call ZONT_fnc_bd_customRequest;
+  [_mmoney]
+},{
+  params ["_mmoney"];
+  NATO_Money = (_mmoney select 0) select 0;
+}, []] call ZONT_fnc_remoteExecCallback; 
+};
 
 /******                            Vehile Lists                             ******/
 Hveh = [ //1000$
 	"rhs_tigr_m_msv",
 	"rhs_tigr_sts_msv"
 ];
+
 /******                            Ranks                             ******/
 _nameplayer = name player;
 if ((_nameplayer find "PFC" !=-1) || (_nameplayer find "CS" !=-1) || (_nameplayer find "CPL" !=-1)) then 

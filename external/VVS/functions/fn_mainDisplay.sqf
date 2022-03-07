@@ -23,12 +23,12 @@ _checkBox = ((findDisplay 38100) displayCtrl 38103);
 
 if(VVS_Checkbox) then
 {
-	_checkBox ctrlSetText "Да";
+	_checkBox ctrlSetText localize "STR_WB_Yes";
 	_checkBox ctrlSetTextColor [0,1,0,1];
 }
 	else
 {
-	_checkBox ctrlSetText "Нет";
+	_checkBox ctrlSetText localize "STR_WB_No";
 	_checkBox ctrlSetTextColor [1,0,0,1];
 };
 
