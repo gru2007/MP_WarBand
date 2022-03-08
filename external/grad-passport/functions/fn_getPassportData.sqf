@@ -4,11 +4,11 @@ params [["_passportOwner",objNull]];
 
 
 
-(([_passportOwner] call ace_common_fnc_getName) splitstring " ") params [["_podrazdel","--"],["_zvanie","--"],["_nick","--"]];
+(([_passportOwner] call ace_common_fnc_getName) splitstring " ") params [["_zvanie","--"],["_name","--"],["_surname","--"]];
 
-_podzvan = _podrazdel + " " + _zvanie;
+_nick = _surname + " " + _name;
 
-_firstName = _passportOwner getVariable [QGVAR(firstName), _podzvan];
+_firstName = _passportOwner getVariable [QGVAR(firstName), _zvanie];
 _lastName = _passportOwner getVariable [QGVAR(lastName), _nick];
 
 private _dateOfBirth = _passportOwner getVariable [QGVAR(dateOfBirth),""];

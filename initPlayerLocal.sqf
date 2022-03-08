@@ -44,37 +44,37 @@ Hveh = [ //1000$
 
 /******                            Ranks                             ******/
 _nameplayer = name player;
-if ((_nameplayer find "PFC" !=-1) || (_nameplayer find "CS" !=-1) || (_nameplayer find "CPL" !=-1)) then 
+if ((_nameplayer find "МТР" !=-1) || (_nameplayer find "СМТР" !=-1)) then 
 {
 	player setRank "CORPORAL"
 } 
 else 
 {
-	if ((_nameplayer find "SGT" !=-1) || (_nameplayer find "SFC" !=-1) || (_nameplayer find "SSG" !=-1) || (_nameplayer find "SPSG" !=-1) || (_nameplayer find "MSG" !=-1) || (_nameplayer find "SGM" !=-1)) then 
+	if ((_nameplayer find "Старшина" !=-1) || (_nameplayer find "Сержант" !=-1)) then 
 	{
 		player setRank "SERGEANT"
 	} 
 	else 
 	{
-		if ((_nameplayer find "WO" !=-1) || (_nameplayer find "LT" !=-1) || (_nameplayer find "SLT" !=-1) || (_nameplayer find "SPLT" !=-1)) then 
+		if ((_nameplayer find "Прапор" !=-1)) then 
 		{
 			player setRank "LIEUTENANT"
 		} 
 		else 
 		{
-			if ((_nameplayer find "CPT" !=-1)) then 
+			if ((_nameplayer find "ЛНТ" !=-1)) then 
 			{
 				player setRank "CAPTAIN"
 			} 
 			else 
 			{
-				if ((_nameplayer find "MAJ" !=-1) || (_nameplayer find "GEN" !=-1)) then 
+				if ((_nameplayer find "КПТ" !=-1) || (_nameplayer find "МЙР" !=-1)) then 
         {
             player setRank "MAJOR"
         }
         else 
 				{
-            if ((_nameplayer find "ADM" !=-1) || (_nameplayer find "COL" !=-1) || (_nameplayer find "CC" !=-1) || (_nameplayer find "MC" !=-1)) then 
+            if ((_nameplayer find "ППЛК" !=-1) || (_nameplayer find "ПЛК" !=-1)) then 
             {
               player setRank "COLONEL"
             }
