@@ -13,12 +13,12 @@
         <Russian>Убрать паспорт</Russian>
     </Key>
     <Key ID="STR_WB_surname">
-        <English>Nick</English>
-        <Russian>Ник</Russian>
+        <English>Surname/Name</English>
+        <Russian>Фамилия/Имя</Russian>
     </Key>
     <Key ID="STR_WB_name">
-        <English>Division/Rank</English>
-        <Russian>Подразделение/Звание</Russian>
+        <English>Rank</English>
+        <Russian>Звание</Russian>
     </Key>
     <Key ID="STR_WB_date">
         <English>Date of birth</English>
