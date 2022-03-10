@@ -625,7 +625,7 @@ force ace_weather_windSimulation = true;
 
 // ACE Полевые рационы
 force acex_field_rations_affectAdvancedFatigue = true;
-force acex_field_rations_enabled = true;
+force acex_field_rations_enabled = false;
 acex_field_rations_hudShowLevel = 0;
 acex_field_rations_hudTransparency = -1;
 acex_field_rations_hudType = 0;
@@ -662,8 +662,8 @@ force ace_advanced_fatigue_enabled = true;
 force ace_advanced_fatigue_enableStaminaBar = true;
 ace_advanced_fatigue_fadeStaminaBar = true;
 force ace_advanced_fatigue_loadFactor = 1;
-force ace_advanced_fatigue_performanceFactor = 1;
-force ace_advanced_fatigue_recoveryFactor = 1;
+force ace_advanced_fatigue_performanceFactor = 0.9;
+force force ace_advanced_fatigue_recoveryFactor = 5;
 force ace_advanced_fatigue_swayFactor = 1;
 force ace_advanced_fatigue_terrainGradientFactor = 1;
 
