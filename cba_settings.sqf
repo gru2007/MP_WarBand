@@ -672,10 +672,10 @@ force acex_sitting_enable = true;
 
 // ACE Симуляция осколков
 force ace_frag_enabled = true;
-force ace_frag_maxTrack = 10;
+force ace_frag_maxTrack = 25;
 force ace_frag_maxTrackPerFrame = 10;
 force ace_frag_reflectionsEnabled = false;
-force ace_frag_spallEnabled = false;
+force ace_frag_spallEnabled = true;
 
 // ACE Слух
 force ace_hearing_autoAddEarplugsToUnits = true;
