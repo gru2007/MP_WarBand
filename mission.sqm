@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=13775;
+		nextID=14275;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1802;
+		nextID=1879;
 	};
 	class Camera
 	{
-		pos[]={16454.617,44.709354,2009.2262};
-		dir[]={-0.21704462,-0.23995383,-0.94622135};
-		up[]={-0.05364779,0.97078234,-0.23388328};
-		aside[]={-0.97469687,-9.3248673e-008,0.22357519};
+		pos[]={9377.6123,45.90691,5642.3501};
+		dir[]={-0.55644125,-0.31014943,0.77083689};
+		up[]={-0.18153121,0.95068622,0.2514753};
+		aside[]={0.81081849,-3.0762749e-008,0.58530325};
 	};
 };
 binarizationWanted=0;
@@ -196,13 +196,15 @@ addons[]=
 	"rhs_c_btr",
 	"rhsusf_c_stryker",
 	"A3_Weapons_F_Explosives",
-	"rhsgref_c_weapons"
+	"rhsgref_c_weapons",
+	"A3_Data_F_ParticleEffects",
+	"A3_Props_F_Exp_Military_OldPlaneWrecks"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=102;
+		items=103;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -863,6 +865,13 @@ class AddonsMetaData
 			name="GREF Weapons";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
+		};
+		class Item102
+		{
+			className="A3_Data_F";
+			name="Arma 3 - Main Configuration";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -16788,7 +16797,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=169;
+		items=172;
 		class Item0
 		{
 			dataType="Marker";
@@ -150442,7 +150451,7 @@ class Mission
 			fillName="DiagGrid";
 			a=914.9187;
 			b=258.66913;
-			angle=177.79475;
+			angle=177.79474;
 			id=13760;
 			atlOffset=19.85701;
 		};
@@ -150457,15 +150466,7 @@ class Mission
 		class Item161
 		{
 			dataType="Marker";
-			position[]={11214.25,10.792136,7447};
-			name="marker_142";
-			type="flag_NATO";
-			id=13766;
-		};
-		class Item162
-		{
-			dataType="Marker";
-			position[]={11994.625,17.351078,7210.25};
+			position[]={11677.375,13.588379,7694};
 			name="marker_91";
 			markerType="RECTANGLE";
 			type="rectangle";
@@ -150473,10 +150474,11 @@ class Mission
 			fillName="DiagGrid";
 			a=1450.1436;
 			b=247.81133;
-			angle=318.40579;
+			angle=162.20338;
 			id=13767;
+			atlOffset=-1.8396215;
 		};
-		class Item163
+		class Item162
 		{
 			dataType="Marker";
 			position[]={10386.625,44.471863,5682.375};
@@ -150485,10 +150487,10 @@ class Mission
 			id=13769;
 			atlOffset=-9.8538971;
 		};
-		class Item164
+		class Item163
 		{
 			dataType="Marker";
-			position[]={9090,12.402954,7187.875};
+			position[]={9632.75,-2.4696045,7638.25};
 			name="marker_70";
 			markerType="RECTANGLE";
 			type="rectangle";
@@ -150496,14 +150498,14 @@ class Mission
 			fillName="DiagGrid";
 			a=942.42126;
 			b=193.9841;
-			angle=261.16263;
+			angle=199.69997;
 			id=13770;
-			atlOffset=-1.0119934;
+			atlOffset=-12.891694;
 		};
-		class Item165
+		class Item164
 		{
 			dataType="Marker";
-			position[]={8543.875,5.8299561,5721.5};
+			position[]={8659.25,6.4973145,5829.5};
 			name="marker_71";
 			markerType="RECTANGLE";
 			type="rectangle";
@@ -150511,11 +150513,11 @@ class Mission
 			fillName="DiagGrid";
 			a=942.42126;
 			b=193.9841;
-			angle=123.83751;
+			angle=123.83749;
 			id=13771;
-			atlOffset=-2.4912596;
+			atlOffset=-3.9040871;
 		};
-		class Item166
+		class Item165
 		{
 			dataType="Marker";
 			position[]={9144.875,7.7670898,4961.625};
@@ -150526,11 +150528,11 @@ class Mission
 			fillName="DiagGrid";
 			a=942.42126;
 			b=193.9841;
-			angle=18.63694;
+			angle=18.636936;
 			id=13772;
 			atlOffset=-0.98727798;
 		};
-		class Item167
+		class Item166
 		{
 			dataType="Marker";
 			position[]={11065.25,47.497498,5541.875};
@@ -150541,11 +150543,11 @@ class Mission
 			fillName="DiagGrid";
 			a=942.42126;
 			b=193.9841;
-			angle=87.271637;
+			angle=87.271622;
 			id=13773;
 			atlOffset=-2.2023315;
 		};
-		class Item168
+		class Item167
 		{
 			dataType="Marker";
 			position[]={10374.5,28.387817,4630};
@@ -150559,6 +150561,562 @@ class Mission
 			angle=11.941213;
 			id=13774;
 			atlOffset=-6.8514137;
+		};
+		class Item168
+		{
+			dataType="Marker";
+			position[]={11181.236,10.838764,7456.7627};
+			name="marker_97";
+			type="flag_Russia";
+			id=13775;
+		};
+		class Item169
+		{
+			dataType="Marker";
+			position[]={10020.25,14.449951,6501.625};
+			name="marker_93";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="DiagGrid";
+			a=942.42126;
+			b=193.9841;
+			angle=181.68329;
+			id=13776;
+			atlOffset=-12.211153;
+		};
+		class Item170
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9288.6797,8.2359953,5705.374};
+			};
+			areaSize[]={1,-1,1};
+			id=14177;
+			type="ModuleEditTerrainObject_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#name";
+					expression="_this setVariable [""#name"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="#initServer";
+					expression="_this setVariable [""#initServer"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="#state";
+					expression="_this setVariable [""#state"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="#allowDamage";
+					expression="_this setVariable [""#allowDamage"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="#doorStates";
+					expression="_this setVariable [""#doorStates"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="#init";
+					expression="_this setVariable [""#init"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=7;
+			};
+		};
+		class Item171
+		{
+			dataType="Layer";
+			name="crashed c-192";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Layer";
+					name="crashed C-130";
+					class Entities
+					{
+						items=15;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9294.7959,8.1308298,5686.4028};
+								angles[]={0,3.1926763,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=14257;
+							type="CraterLong";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9296.6064,8.2513533,5691.9077};
+								angles[]={0.092251964,2.7134211,5.9797659};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=14258;
+							type="CraterLong_small";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9290.875,8.0958843,5690.5811};
+								angles[]={0,2.7424381,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=14259;
+							type="CraterLong_small";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9290.085,8.189683,5697.314};
+								angles[]={0,3.0864522,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=14260;
+							type="CraterLong_small";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9294.8516,8.7048454,5698.5977};
+								angles[]={0.14022431,3.0336554,5.9683414};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=14261;
+							type="CraterLong_small";
+							atlOffset=0.38284302;
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9309.7129,11.066002,5806.3154};
+								angles[]={6.2215633,0.090719797,6.2566214};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=14262;
+							type="CraterLong";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9286.7861,8.5919857,5737.8711};
+								angles[]={6.2747779,2.9920034,0.017561389};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=14263;
+							type="CraterLong_small";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9290.2236,8.6673412,5711.7769};
+								angles[]={0.076432504,3.1845455,5.9556737};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=14264;
+							type="CraterLong_small";
+							atlOffset=0.26733398;
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9310.46,11.621118,5815.5};
+								angles[]={6.2208157,3.1926689,6.265624};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=14265;
+							type="CraterLong";
+						};
+						class Item9
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9287.0938,8.7303267,5734.7417};
+								angles[]={6.2747779,4.1246443,0.017561389};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=14266;
+							type="Land_HistoricalPlaneDebris_04_F";
+						};
+						class Item10
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9289.3174,8.8650885,5746.7104};
+								angles[]={6.2732806,3.1926739,0.014109671};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=14267;
+							type="Land_HistoricalPlaneDebris_01_F";
+							atlOffset=-5.7220459e-006;
+						};
+						class Item11
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9299.9414,10.086895,5774.2407};
+								angles[]={0.019914431,4.7798934,6.2573376};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=14268;
+							type="Land_HistoricalPlaneDebris_03_F";
+							atlOffset=0.32349396;
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9306.0576,10.329445,5783.5835};
+								angles[]={0.28738981,2.4355235,6.0806065};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=14269;
+							type="CraterLong_small";
+							atlOffset=0.47066402;
+						};
+						class Item13
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9310.9619,12.197727,5816.6201};
+								angles[]={0.013015329,3.1990378,0.46538949};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=14270;
+							type="Land_HistoricalPlaneDebris_01_F";
+							atlOffset=0.41434956;
+						};
+						class Item14
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9308.5693,11.507903,5804.0303};
+								angles[]={6.1199932,3.1927254,6.1215916};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=14271;
+							type="Land_HistoricalPlaneDebris_04_F";
+							atlOffset=0.41740608;
+						};
+					};
+					id=14256;
+					atlOffset=0.50516605;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9291.4473,8.3442621,5697.604};
+						angles[]={0,5.97085,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=14272;
+					type="Land_Wreck_Plane_Transport_01_F";
+					atlOffset=0.10418606;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ENH_allowSprint";
+							expression="_this allowSprint _value";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9305.7266,10.069901,5783.3101};
+						angles[]={6.2332368,3.9575644,0.0049555185};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=14273;
+					type="Land_HistoricalPlaneWreck_02_wing_left_F";
+					atlOffset=-0.00033187866;
+				};
+			};
+			id=14274;
+			atlOffset=0.55973625;
 		};
 	};
 };

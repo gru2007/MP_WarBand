@@ -34,6 +34,7 @@ class CfgFunctions {
       class getConst { };
       class forceExit { };
       class getSideMoney { };
+      class news { };
     };
     class Database {
       file = "database_framework";
