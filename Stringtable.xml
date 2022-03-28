@@ -64,4 +64,20 @@
         <English>Equipment:</English>
         <Russian>Cнаряжение:</Russian>
     </Key>
+    <Key ID="STR_WB_Welcome">
+        <English>Welcome,</English>
+        <Russian>Добро пожаловать,</Russian>
+    </Key>
+    <Key ID="STR_WB_Project">
+        <English>WarBand game project</English>
+        <Russian>Игровой проект WarBand</Russian>
+    </Key>
+    <Key ID="STR_WB_Discord">
+        <English>Join our Discord</English>
+        <Russian>Вступайте в наш Discord</Russian>
+    </Key>
+    <Key ID="STR_WB_GoodLuck">
+        <English>Good luck!</English>
+        <Russian>Удачи!</Russian>
+    </Key>
 </Project>

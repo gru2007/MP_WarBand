@@ -7,13 +7,13 @@ _onScreenTime = 5;
 
 sleep 20; //Время до начала титров
 
-_role1 = "Welcome,";
+_role1 = localize "STR_WB_Welcome";
 _role1names = [profileName];
-_role2 = "WarBand game project";
+_role2 = localize "STR_WB_Project";
 _role2names = ["Created by rustamka"];
-_role3 = "Join our Discord";
+_role3 = localize "STR_WB_Discord";
 _role3names = ["discord.gg/wHzuKUT5UG"];
-_role4 = "Good luck!";
+_role4 = localize "STR_WB_GoodLuck";
 _role4names = [profileName];
 {
 sleep 2; // #1f75fe
