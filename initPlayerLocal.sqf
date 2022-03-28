@@ -7,6 +7,8 @@ waitUntil {vehicle player == player};
 
 [] spawn ZONT_fnc_initTeleportTerminals;
 
+[] spawn ZONT_fnc_news;
+
 [] execVM "chatCommands.sqf";
 [] execVM "legacy\intro\introtext.sqf";
 
