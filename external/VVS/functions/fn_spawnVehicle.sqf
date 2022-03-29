@@ -43,6 +43,12 @@ if(price > money) exitWith{
 	closeDialog 0;
 };
 
+//Has player rights?
+if(!([2] call ZONT_fnc_checkRole)) exitWith{
+	hint localize "STR_WB_norights";
+	closeDialog 0;
+}
+
 //Take money
 if(playerSide==east) then {
 	ODKB_Money = ODKB_Money - price;

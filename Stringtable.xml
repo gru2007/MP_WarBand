@@ -56,9 +56,13 @@
         <English>No</English>
         <Russian>Нет</Russian>
     </Key>
-    <Key ID="STR_WB_Yes">
+    <Key ID="STR_WB_Yes"> 
         <English>Yes</English>
         <Russian>Да</Russian>
+    </Key>
+    <Key ID="STR_WB_norights"> 
+        <English>You don't have rights to do that</English>
+        <Russian>У вас нет прав чтобы это сделать</Russian>
     </Key>
     <Key ID="STR_WB_Equip">
         <English>Equipment:</English>
