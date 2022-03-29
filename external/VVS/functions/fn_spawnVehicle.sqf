@@ -44,10 +44,10 @@ if(price > money) exitWith{
 };
 
 //Has player rights?
-if(2 in ZPR_roles) exitWith{
+if(!(2 in ZPR_roles)) exitWith{
 	hint localize "STR_WB_norights";
 	closeDialog 0;
-}
+};
 
 //Take money
 if(playerSide==east) then {
