@@ -91,7 +91,7 @@ private _fn_getRange = {
 
     systemChat _input;
     private _ia = _input splitString " .,";
-    if (count _ia == 0) exitWith { systemChat "Possible: #role add, #role rm" };
+    if (count _ia == 0) exitWith { systemChat "Possible: #roles add, #roles rm" };
 
     if not (assert !isNil "ZPR_roles") then {
       systemChat "Похоже, что у вас сломались скрипты. Есле перезаход не поможет, обратитесь к техадмину";
