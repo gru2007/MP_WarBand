@@ -25,9 +25,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={16458.23,33.831127,1967.5385};
-		dir[]={0.94564718,-0.21503681,0.24395241};
-		up[]={0.20821983,0.97660625,0.053715106};
-		aside[]={0.24979639,5.8818841e-008,-0.96829951};
+		dir[]={0.94564623,-0.21503656,0.24395181};
+		up[]={0.20821959,0.97660595,0.053715169};
+		aside[]={0.24979551,0,-0.96829855};
 	};
 };
 binarizationWanted=0;
@@ -151054,7 +151054,7 @@ class Mission
 					};
 					id=14272;
 					type="Land_Wreck_Plane_Transport_01_F";
-					atlOffset=0.10416317;
+					atlOffset=0.10418606;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -151128,13 +151128,13 @@ class Mission
 				angles[]={6.281425,5.7051883,6.2819896};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[] call ZONT_fnc_RusPCInit;";
 			};
 			id=14275;
 			type="Computer";
+			atlOffset=0.96958542;
 		};
 		class Item173
 		{
@@ -151151,6 +151151,7 @@ class Mission
 			};
 			id=14277;
 			type="Land_WoodenTable_02_large_F";
+			atlOffset=-1.335144e-005;
 		};
 	};
 };
