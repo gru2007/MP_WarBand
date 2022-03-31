@@ -5,6 +5,8 @@
 /**********                       External includes                       **********/
 #include "external\VVS\menu.ext"
 #include "external\grad-passport\grad_passport.hpp"
+#include "external\computer\defines.hpp"
+#include "external\computer\dialog.hpp"
 
 /**********                        Properties                        **********/
 respawnOnStart = -1;
@@ -35,6 +37,7 @@ class CfgFunctions {
       class forceExit { };
       class getSideMoney { };
       class news { };
+      class RusPCInit { };
     };
     class Database {
       file = "database_framework";
@@ -89,6 +92,7 @@ class CfgFunctions {
   #include "external\tts_beam\cfgFunctions.ext"
   #include "external\vcom\cfgFunctions.hpp"
   #include "external\grad-passport\cfgFunctions.hpp"
+  #include "external\computer\cfgFunctions.ext"
 };
 
 /**********                        VCOM AI                        **********/

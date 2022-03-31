@@ -1,0 +1,55 @@
+class Computer {
+	class Computer {
+		tag = "Computer"
+		file = "external\computer\functions\computer";
+		class open {};
+		class close {};
+		class getUserInput {};
+		class print {};
+		class changeLineCount{};
+	};
+};
+class CommandLine {
+	class CommandLine {
+		tag = "CommandLine"
+		file = "external\computer\functions\commandLine";
+		class newCommandLine {};
+		class executeLine {};
+		class processUserInput {};
+		class getCommand {};
+		class getCurrentDir {};
+		class alphaToAlpha {};
+	};
+};
+class Line {
+	class Line {
+		tag = "Line"
+		file = "external\computer\functions\line";
+		class newLine {};
+		class push {};
+		class pop {};
+		class inputToString {};
+		class parseFilePath {};
+		class parseSpaceDeliniation {};
+	};
+};
+class File {
+	class File {
+		tag = "File"
+		file = "external\computer\functions\file";
+		class getFile {};
+		class getFileIndex {};
+		class getType {};
+		class hasReadPermission {};
+		class hasWritePermission {};
+		class hasExecutePermission {};
+	};
+};
+class Steed {
+	class Steed {
+		tag = "Steed"
+		file = "external\computer\functions\steed";
+		class newSteed {};
+		class processUserInput {};
+	};
+};

@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=14275;
+		nextID=14278;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1879;
+		nextID=2026;
 	};
 	class Camera
 	{
-		pos[]={9377.6123,45.90691,5642.3501};
-		dir[]={-0.55644125,-0.31014943,0.77083689};
-		up[]={-0.18153121,0.95068622,0.2514753};
-		aside[]={0.81081849,-3.0762749e-008,0.58530325};
+		pos[]={16458.23,33.831127,1967.5385};
+		dir[]={0.94564718,-0.21503681,0.24395241};
+		up[]={0.20821983,0.97660625,0.053715106};
+		aside[]={0.24979639,5.8818841e-008,-0.96829951};
 	};
 };
 binarizationWanted=0;
@@ -198,7 +198,8 @@ addons[]=
 	"A3_Weapons_F_Explosives",
 	"rhsgref_c_weapons",
 	"A3_Data_F_ParticleEffects",
-	"A3_Props_F_Exp_Military_OldPlaneWrecks"
+	"A3_Props_F_Exp_Military_OldPlaneWrecks",
+	"A3_Props_F_Enoch_Civilian_Camping"
 };
 class AddonsMetaData
 {
@@ -16797,7 +16798,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=172;
+		items=174;
 		class Item0
 		{
 			dataType="Marker";
@@ -150498,7 +150499,7 @@ class Mission
 			fillName="DiagGrid";
 			a=942.42126;
 			b=193.9841;
-			angle=199.69997;
+			angle=199.69991;
 			id=13770;
 			atlOffset=-12.891694;
 		};
@@ -150528,7 +150529,7 @@ class Mission
 			fillName="DiagGrid";
 			a=942.42126;
 			b=193.9841;
-			angle=18.636936;
+			angle=18.636934;
 			id=13772;
 			atlOffset=-0.98727798;
 		};
@@ -150543,7 +150544,7 @@ class Mission
 			fillName="DiagGrid";
 			a=942.42126;
 			b=193.9841;
-			angle=87.271622;
+			angle=87.271614;
 			id=13773;
 			atlOffset=-2.2023315;
 		};
@@ -151053,7 +151054,7 @@ class Mission
 					};
 					id=14272;
 					type="Land_Wreck_Plane_Transport_01_F";
-					atlOffset=0.10418606;
+					atlOffset=0.10416317;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -151117,6 +151118,39 @@ class Mission
 			};
 			id=14274;
 			atlOffset=0.55973625;
+		};
+		class Item172
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16470.875,29.675999,1969.1263};
+				angles[]={6.281425,5.7051883,6.2819896};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[] call ZONT_fnc_RusPCInit;";
+			};
+			id=14275;
+			type="Computer";
+		};
+		class Item173
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16471,29.004292,1969.2535};
+				angles[]={0,2.5534546,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=14277;
+			type="Land_WoodenTable_02_large_F";
 		};
 	};
 };
