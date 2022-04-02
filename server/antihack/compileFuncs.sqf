@@ -5,7 +5,7 @@
 //	@file Name: compileFuncs.sqf
 //	@file Author: AgentRev
 //	@file Created: 04/01/2014 02:51
-/*
+
 params [["_assignCompileKey","",[""]], ["_assignChecksum","",[""]], ["_assignPacketKey","",[""]], ["_rscParams",[],[[]]], ["_payload",0,[0,{}]]];
 
 private _compileKey = call compile (_assignCompileKey + "_compileKey");
@@ -82,4 +82,3 @@ if (isServer) then
 	A3W_network_compileFuncs = compileFinal "true";
 	publicVariable "A3W_network_compileFuncs";
 };
-*/
