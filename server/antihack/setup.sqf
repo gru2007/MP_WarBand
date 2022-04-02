@@ -5,7 +5,7 @@
 //	@file Name: setup.sqf
 //	@file Author: AgentRev
 //	@file Created: 07/06/2013 22:24
-
+/*
 if (!isServer) exitWith {};
 
 if (isNil "A3W_network_compileFuncs") then
@@ -96,3 +96,4 @@ if (isNil "A3W_network_compileFuncs") then
 
 	diag_log "ANTI-HACK: Started.";
 };
+*/
