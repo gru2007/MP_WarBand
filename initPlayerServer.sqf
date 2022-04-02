@@ -1,7 +1,18 @@
-params ["_player", "_didJIP"];
-private _curators = call ZONT_fnc_retrieveCurators;
-if not ((getPlayerUID _player) in _curators) exitWith { };
-_player call ZONT_fnc_giveZeus;
-_name = name _player;
-_uid = getPlayerUID _player;
-[MPS_BDL_pres, "updName", [_name, _uid]] call ZONT_fnc_bd_customRequest;
+// ******************************************************************************************
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// ******************************************************************************************
+//	@file Name: initPlayerServer.sqf
+//	@file Author: AgentRev
+
+if (canSuspend) exitWith {}; // called via BIS_fnc_execVM by A3\functions_f\initFunctions.sqf, must be suppressed because _player is sometimes null
+
+params [["_player",objNull,[objNull]], ["_jip",true,[false]], ["_hasInterface",true,[false]]];
+
+if (isNull _player) exitWith {};
+
+_player setVariable ["A3W_joinTickTime", missionNamespace getVariable ["A3W_joinTickTime_" + getPlayerUID _player, diag_tickTime], true];
+
+if (!isNil "currentTerritoryDetails" && _hasInterface) then
+{
+	[_player, _jip] call updateConnectingClients;
+};

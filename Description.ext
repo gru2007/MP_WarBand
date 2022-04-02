@@ -1,272 +1,140 @@
-/**********                    Framework includes                    **********/
-#include "infiSTAR_AdminMenu.ext"
-#include "skills_framework\skills.ext"
-#include "profiles_framework\roles.ext"
-/**********                       External includes                       **********/
-#include "external\VVS\menu.ext"
-#include "external\grad-passport\grad_passport.hpp"
-
-/**********                        Properties                        **********/
-respawnOnStart = -1;
-cba_settings_hasSettingsFile = 1;
-
-/**********                        Header                        **********/
+respawn="BASE";
+respawnDelay=15;
+disabledAI=1;
+disableChannels[] = {{0,false,true}, {2,true,true}}; // 0 = global, 1 = side, 2 = command // new syntax: {{channel<number>, disableText<bool>, disableVoice<bool>}, ...};
+// side voice is disabled for indies in client\preInit.sqf
+joinUnassigned = 0;
+enableItemsDropping = 0;
+forceRotorLibSimulation = 0; // if you set this to 1, you deny freedom of choice to the players, which is the very principle this mission is built upon
+weaponPool = 0;
+unsafeCVL = 1; // required for store selling bins and private storage
+corpseManagerMode = 1;
+corpseRemovalMinTime = 30*60;
+corpseRemovalMaxTime = 30*60;
+wreckManagerMode = 1;
+wreckRemovalMinTime = 5*60;
+wreckRemovalMaxTime = 10*60;
+enableDebugConsole = 1;
+respawnDialog = 0; // do not enable this, otherwise the default scoreboard will overlap with the new one
+onPauseScript = "client\clientEvents\onPause.sqf";
 class Header
 {
-	gameType =  RPG;	// Game type
-	minPlayers =  1;	// minimum number of players the mission supports
-	maxPlayers = 120;	// maximum number of players the mission supports
+	gameType=Sandbox;
+	minPlayers=1;
+	maxPlayers=146; // 144 players, 2 headless clients
 };
+author="AgentRev - A3Wasteland.com"; // it would be great if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
+onLoadName = "A3Wasteland Altis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
+onLoadMission = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
+overviewText = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
+overviewTextLocked = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
+overviewPicture = "mapConfig\Loading.jpg";
+loadScreen = "mapConfig\Loading.jpg";
+briefing = 0; // if 0, skip Continue button
 
-/**********                       Basic configs                      **********/
-class CfgFunctions {
-  class ZONT {
-    class Functions {
-      file = "fnc";
-      class remoteExecCallback { };
-      class giveZeus { };
-      class initTeleportTerminals { };
-      class addTeleportTerminal { };
-      class showTextLC { };
-      class showStructuredTextLC { };
-      class addChatCommand { };
-      class removeAllVars { };
-      class getConst { };
-      class forceExit { };
-    };
-    class Database {
-      file = "database_framework";
-      class bd_initBasic { };
-      class bd_initCustom { };
-      class bd_customRequest { };
+#include "debugFlag.hpp"
 
-      class commitInfo { };
-      class retrieveCurators { };
-    };
-    class Profiles {
-      file = "profiles_framework";
-      class getRoles { };
-      class profilesGUI { };
-      class loadDone { };
-      class newProfile { };
-      class checkRole { };
-      class updProfile { };
+// A3W UI color (default = sky blue)
 
-      class saveProfile { };
-      class loadProfile { };
-      class autoSaveInit { };
-    };
-    class SkillsFramework {
-      file = "skills_framework";
-      class initSkills { };
-      class addSkillAction { };
-      class checkFlag { };
-      class skillVar { };
-      class getSkillVar { };
-      class setSkillVar { };
-      class actionFromConfig { };
-      class replacePrivates { };
-      class actionCondition { };
-      class wrapSkillConfig { };
-    };
-    class Skills {
-      file = "skills";
-      class consumableSkillBase { };
-      class showGroupHeartRate { };
-      class skill_armor { };
-      class skill_bacta_init { };
-      class skill_bacta { };
-      class skill_berserk { };
-      class skill_cloak { };
-      class skill_ghillie { };
-      class skill_impulse { };
-      class skill_injector { };
-      class skill_warden { };
-    };
-    #include "dev\include.ext"
-  };
-  #include "external\VVS\Functions.ext"
-  #include "external\tts_beam\cfgFunctions.ext"
-  #include "external\vcom\cfgFunctions.hpp"
-  #include "external\grad-passport\cfgFunctions.hpp"
-};
+#define A3W_UICOLOR_R  0.25 // default = 0.25
+#define A3W_UICOLOR_G  0.51 // default = 0.51
+#define A3W_UICOLOR_B  0.96 // default = 0.96
 
-/**********                        VCOM AI                        **********/
-class Extended_PreInit_EventHandlers {
-	VCM_CBASettings = call compile preprocessFileLineNumbers "external\Vcom\Functions\VCM_CBASettings.sqf";
-};
+//Dialog includes
 
-class CfgSounds {
-  sounds[] = {};
-  #include "external\tts_beam\cfgSounds.ext"
-};
+#include "client\gui_base.hpp"
+#include "addons\R3F_ARTY_AND_LOG\desc_include.h"
+#include "client\systems\ui_toolkit.hpp"
+#include "client\systems\common.hpp"
+#include "client\items\warchest\dialog.hpp"
+#include "client\items\atm\atm_gui.hpp"
+#include "client\items\artillery\artillery_gui.hpp"
+#include "client\actions\gui.hpp"
+#include "addons\far_revive\reviveBlank_gui.hpp"
+#include "client\systems\playerMenu\dialog\player_settings.hpp"
+#include "client\systems\groups\dialog\groupManagement.hpp"
+#include "client\systems\gunStore\dialog\gunshop_settings.hpp"
+#include "client\systems\generalStore\dialog\genstore_settings.hpp"
+#include "client\systems\vehicleStore\dialog\vehiclestore_settings.hpp"
+#include "client\systems\vehicleStore\dialog\vehpaint_gui.hpp"
+#include "client\systems\adminPanel\dialog\adminMenu.hpp"
+#include "client\systems\adminPanel\dialog\modMenu.hpp"
+#include "client\systems\adminPanel\dialog\serverAdminMenu.hpp"
+#include "client\systems\adminPanel\dialog\debugMenu.hpp"
+#include "client\systems\adminPanel\dialog\playerMenu.hpp"
+#include "client\systems\adminPanel\dialog\vehicleManagement.hpp"
+#include "client\systems\adminPanel\dialog\markerLog.hpp"
+#include "client\systems\adminPanel\dialog\objectSearch.hpp"
+#include "client\systems\playerMenu\dialog\respawn_dialog.hpp"
+#include "client\systems\playerMenu\dialog\teamkill_dialog.hpp"
+#include "client\systems\killFeed\killFeedMenu_gui.hpp"
+#include "addons\proving_ground\PG_config.hpp"
+#include "addons\outlw_magrepack\config.hpp"
+#include "addons\gui\gui.hpp"
+#include "addons\parking\list_simple_menu.hpp"
+#include "addons\CHVD\dialog.hpp"
 
-class CfgDebriefing {
-  class force {
-    title = "Выкинут в лобби";
-		description = "Тебя выкинули в лобби скриптом.";
-		pictureBackground = "";
-		picture = "pic\monk.paa";
-  };
-  class profileErr {
-    title = "Ошибка инициализации профиля";
-		description = "Попробуй НЕ нажимать Escape во время загрузки. Так же, выбери роль или профиль, если тебя об этом просят. Так же, попробуй пошаманить над своим ником в игре. Учти, что знаки [] точно НЕ влияют, можешь их НЕ убирать. Если ты не можешь играть, свяжись с gru2007 в дискорде";
-		pictureBackground = "";
-		picture = "pic\monk.paa";
-  };
-  class inczeus {
-    title = "Нет прав играть на зевсе";
-    subtitle = "Ты либо додик, либо тебя не добавили";
-		description = "Если ты действительно ГМ, свяжись с администрацией";
-		pictureBackground = "";
-		picture = "pic\monk.paa";
-  };
-  class incwest {
-    title = "Нет прав играть на синих";
-    subtitle = "Ты либо додик, либо тебя не добавили";
-		description = "Если ты действительно считаешь, что можешь играть за синих, свяжись с администрацией";
-		pictureBackground = "";
-		picture = "pic\monk.paa";
-  };
-  class inceast {
-    title = "Нет прав играть на красных";
-    subtitle = "Ты либо додик, либо тебя не добавили";
-		description = "Если ты действительно считаешь, что можешь играть за красных, свяжись с администрацией";
-		pictureBackground = "";
-		picture = "pic\monk.paa";
-  };
-  class incguer {
-    title = "Нет прав играть на зеленых";
-    subtitle = "Ты либо додик, либо тебя не добавили";
-		description = "Если ты действительно считаешь, что можешь играть за бабахов, свяжись с администрацией";
-		pictureBackground = "";
-		picture = "pic\monk.paa";
-  };
-};
-
-class CfgConsts {
-  ztt_terminals[] = {"Land_PhoneBooth_01_F"};
-  ghr_rand_radius = 5;
-  ghr_rand_period = 2;
-  ghr_entry = "%1: <t color='%3'>%2</t>"; // %1 - unit, %2 - heartrate, %3 - color (#abc123)
-};
-
-// Настройки WarLords (WIP)
-class CfgWLRequisitionPresets
+class RscTitles
 {
-    class MyWLAssetList // --- имя класса прописанного в модуле "Инициализация WARLORDS".
-    {
-        class WEST // --- Доступное для BLUFOR
-        {
-            class Infantry
-            {
-
-            };
-            class Vehicles // Машины 
-            {
-                class 3as_RTT
-                {
-                    cost = 250;
-                    requirements[]={};
-                };
-            };
-            class Aircraft // Авиация
-            {
-
-            };
-            class Naval // Флот
-            {
-            };
-            class Gear // Снаряжение (ящики)
-            {
-                class Box_212_Ammo
-                {
-                    cost = 10;
-                    requirements[]={};
-                };
-            };
-            class Defences // Защитные. Например: Станочные орудия
-            {
-                class 3AS_HeavyRepeater_Armoured
-                {
-                    cost = 250;
-                    requirements[]={};
-                };
-                class 3AS_HeavyRepeater_UnArmoured
-                {
-                    cost = 150;
-                    requirements[]={};
-                };
-            };
-        };
-        class EAST // --- доступное для OPFOR
-        {
-            // --- место для ввода своих вариантов
-        };
-    };
+	#include "addons\proving_ground\PG_rsctitles.hpp"
+	#include "addons\lsd_nvg\RscTitles.hpp"
+	#include "client\systems\hud\dialog\hud.hpp"
+	#include "client\systems\playerMenu\dialog\welcome.hpp"
+	#include "client\systems\scoreboard\score_gui.hpp"
+	#include "client\systems\killFeed\killFeed_gui.hpp"
+	#include "addons\far_revive\revive_gui.hpp"
 };
 
-//Фигня для WarLords, честно говоря нз когда юзать будем его
-class CfgWLFactionAssets
+class CfgDebriefing
 {
-	class WEST // --- BLUFOR
+	class ErrorSteamID
 	{
-		class InfantryUnits // --- for BLUFOR and OPFOR, only individual unit classnames are defined as the system doesn't spawn predefined groups
-		{
-			class JLTS_Clone_P2_RTO {}; // --- asset classname to be added to the spawn list
-		};
-	};
-	class EAST // --- OPFOR
-	{
-		class InfantryUnits
-		{
-			class JLTS_Droid_B1_E5 {};
-		};
-	};
-	class INDEP // --- Independent
-	{
-		class InfantryGroups // --- independent faction uses group configs to spawn garrisons; you can define various group types to be randomly used
-		{
-			groups[] = {
-			//	"'Indep' >> 'IND_G_F' >> 'Infantry' >> 'I_G_InfSquad_Assault'", // --- use this part of the config path found in the Config viewer (CfgGroups)
-			//	"'Indep' >> 'IND_C_F' >> 'Infantry' >> 'BanditCombatGroup'" // --- NOTE THE QUOTATION MARKS AND APOSTROPHES
-			};
-		};
-		class MotorizedGroups
-		{
-			groups[] = {
-				
-			};
-		};
-		class MechanizedGroups
-		{
-			groups[] = {
-				
-			};
-		};
-		class ArmoredGroups
-		{
-			groups[] = {
-				
-			};
-		};
+		title = "Error";
+		subtitle = "";
+		description = "The server is unable to find your Steam ID due to an Arma engine network bug. Please rejoin the server.<br/>If the problem persists after rejoining, please restart the game.";
 	};
 };
 
-//Discord info
-class CfgDiscordRichPresence {
-    applicationID="925714148791287818";				            // Provided by discord
-    defaultDetails="The best milsim in Arma3 ever";	        // Upper text
-    defaultState="";			                                // Lower text
-    defaultLargeImageKey="warband";					                	// Large image
-    defaultLargeImageText="WarBand Milsim";   // Large image hover text
-    defaultSmallImageKey="arma3";					              	// Small image
-    defaultSmallImageText="Arma 3";				            		// Small image hover text
-    useTimeElapsed=1;								                    	// Show time elapsed since the player connected (1 - true, 0 - false)
+class CfgFunctions
+{
+	class A3W
+	{
+		#include "client\CfgFunctions.hpp"
+		#include "server\CfgFunctions.hpp"
+	};
+
+	#include "addons\CHVD\CfgFunctions.hpp"
 };
 
-/**********                        AutoQuests                        **********/
-class aissp_configs
+class CfgNotifications
 {
-	#include "external\LV\config_aissp.hpp"
+	#include "client\CfgNotifications.hpp"
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	#include "client\CfgSounds.hpp"
+};
+
+class CfgRemoteExec // applies only to clients
+{
+	class Functions
+	{
+		#ifndef A3W_DEBUG
+		mode = 1; // 0 = block all, 1 = whitelist, 2 = allow all
+		#else
+		mode = 2; // debug mode, don't touch
+		#endif
+
+		#include "client\CfgRemoteExec_fnc.hpp"
+	};
+	class Commands
+	{
+		#ifndef A3W_DEBUG
+		mode = 1; // 0 = block all, 1 = whitelist, 2 = allow all
+		#else
+		mode = 2; // debug mode, don't touch
+		#endif
+	};
 };
